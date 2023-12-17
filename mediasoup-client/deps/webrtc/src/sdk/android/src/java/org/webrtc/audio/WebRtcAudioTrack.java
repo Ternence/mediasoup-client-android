@@ -51,7 +51,7 @@ class WebRtcAudioTrack {
 
   private static int getDefaultUsageAttribute() {
     if (Build.VERSION.SDK_INT >= 21) {
-      return AudioAttributes.USAGE_VOICE_COMMUNICATION;
+      return AudioAttributes.USAGE_MEDIA;
     } else {
       // Not used on SDKs lower than L.
       return 0;

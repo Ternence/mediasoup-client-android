@@ -8,12 +8,12 @@ set(mediasoup_client_so_VERSION_MINOR 0)
 set(mediasoup_client_so_VERSION_PATCH 8)
 
 # C++ standard requirements.
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(
 	SOURCE_DIR
-	${mediasoupclient_so_SOURCE_DIR}/src/main/jni/
+	${CMAKE_CURRENT_LIST_DIR}/src/main/jni/
 )
 
 set(
@@ -67,9 +67,9 @@ include_directories(SYSTEM "${LIBWEBRTC_INCLUDE_PATH}/third_party/abseil-cpp")
 target_include_directories(${PROJECT_NAME} PUBLIC
 	"${SOURCE_DIR}/"
 	"${SOURCE_DIR}/include"
-	"${PROJECT_SOURCE_DIR}/deps/libmediasoupclient/include"
-	"${PROJECT_SOURCE_DIR}/deps/libmediasoupclient/test/include"
-	"${PROJECT_SOURCE_DIR}/deps/libmediasoupclient/deps/libsdptransform/include"
+	"${CMAKE_CURRENT_LIST_DIR}/deps/libmediasoupclient/include"
+	"${CMAKE_CURRENT_LIST_DIR}/deps/libmediasoupclient/test/include"
+	"${CMAKE_CURRENT_LIST_DIR}/deps/libmediasoupclient/deps/libsdptransform/include"
 	"${LIBWEBRTC_INCLUDE_PATH}"
 	"${LIBWEBRTC_INCLUDE_PATH}/third_party/abseil-cpp"
 )

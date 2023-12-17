@@ -14,7 +14,7 @@ configure_file (
 )
 
 # C++ standard requirements.
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Project options.
@@ -23,8 +23,8 @@ option(MEDIASOUPCLIENT_LOG_TRACE   "Enable MSC_LOG_TRACE (See Logger.hpp)" OFF)
 option(MEDIASOUPCLIENT_LOG_DEV     "Enable MSC_LOG_DEV (See Logger.hpp)" OFF)
 
 # Project configuration.
-set(LIBWEBRTC_INCLUDE_PATH "" CACHE STRING "libwebrtc include path")
-set(LIBWEBRTC_BINARY_PATH "" CACHE STRING "libwebrtc binary path")
+set(LIBWEBRTC_INCLUDE_PATH "/Users/zty/icode/AndroidStudioProjects/mediasoup-client-android/mediasoup-client/deps/webrtc/src" CACHE STRING "libwebrtc include path")
+set(LIBWEBRTC_BINARY_PATH "/Users/zty/icode/AndroidStudioProjects/mediasoup-client-android/mediasoup-client/deps/webrtc/lib" CACHE STRING "libwebrtc binary path")
 
 if(NOT LIBWEBRTC_INCLUDE_PATH)
 	message(FATAL_ERROR "LIBWEBRTC_INCLUDE_PATH not provided")
